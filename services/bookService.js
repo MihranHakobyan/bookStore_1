@@ -26,10 +26,10 @@ class BookService {
         await Books.destroy({where:{id:bookId}})
     }
     static  async updateBook(bookId,title, author, price, category){
-        await Books.update({title:title, author:author, price:price, category:category}, {where:{id:bookId}});
+        await Books.update({title,author,price,category}, {where:{id:bookId}});
 
     }
 
 }
 
-module.exports = BookService;
+    module.exports = BookService;
